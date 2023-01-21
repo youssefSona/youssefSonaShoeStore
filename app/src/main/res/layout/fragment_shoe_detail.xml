@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?><!--layout tag for dataBinding-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="sharedViewModel"
+            type="com.example.shoestore.SharedViewModel" />
+    </data>
+
+    <!--  Constraint Layout root ViewGroup  -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Linear Layout as a UI holder -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mainLayoutMargin"
+            android:layout_marginTop="@dimen/mainLayoutMargin"
+            android:layout_marginEnd="@dimen/mainLayoutMargin"
+            android:layout_marginBottom="@dimen/mainLayoutMargin"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tempTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_name_here"
+                android:text="@={sharedViewModel.name}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/company"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_company_here"
+                android:text="@={sharedViewModel.company}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/size"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_size_here"
+                android:text="@={sharedViewModel.size}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_description_here"
+                android:text="@={sharedViewModel.description}" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:textColor="@color/black" />
+<!--            app:onclick="@{() -> sharedViewModel.addNewShoe()}"-->
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

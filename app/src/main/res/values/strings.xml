@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Shoe Store</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wewe">wewe</string>
+    <string name="logout">logout</string>
+    <string name="name">Name</string>
+    <string name="enter_name_here">Enter Name here</string>
+    <string name="company">Company</string>
+    <string name="enter_company_here">Enter Company here</string>
+    <string name="size">Size</string>
+    <string name="enter_size_here">Enter Size here</string>
+    <string name="description">Description</string>
+    <string name="enter_description_here">Enter Description here</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+</resources>
